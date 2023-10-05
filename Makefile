@@ -1,7 +1,7 @@
 CC = g++
 CFLAGS =
 LDFLAGS = -lgmpxx -lgmp
-OBJECTS = adjlist.o homhops.o demo.o
+OBJECTS = homhops.o homhopsplus.o hops.o sghd.o adjlist.o demo.o
 HEADERS = graph.h
 
 %.o:%.c $(HEADERS)
