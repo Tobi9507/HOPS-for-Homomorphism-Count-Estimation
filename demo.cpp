@@ -8,6 +8,13 @@ using namespace std;
 int main( int argc, char* argv[] )
 {
 
+    /*
+    for (int i = 0; i < argc; i++) {
+        printf("%s\n", argv[i]);
+    }
+    cout << endl;*/
+
+    //./demo pattern.txt input.txt [time+seconds] [repetitions] [exact] [plot]
     //inputargs
     //flags -all -hops -homhops -homhopsplus -sghd
     //flags timer
@@ -33,18 +40,18 @@ int main( int argc, char* argv[] )
     int iterations = 50000;
     int successful_tries = 0;
     int iteration_count = 0;
-    int timer = 2000;
+    int timer = 60000;
     int time_sec = timer/1000;
 
-    Graph h(patterns[0]);
-    Graph g(inputs[0]);
-    int cycles_h;
+    Graph h(argv[1]);
+    Graph g(argv[2]);
+    int cycles_h=0;
 
-    cout << "Pattern: " << patterns[0] << endl;
+    cout << "Pattern: " << argv[1] << endl;
     cycles_h = graph_props(&h);
     cout << endl;
 
-    cout << "Inputgraph: " << inputs[0] << endl;
+    cout << "Inputgraph: " << argv[2] << endl;
     graph_props(&g);
     cout << endl;
 
@@ -79,7 +86,8 @@ int main( int argc, char* argv[] )
         cout << "(homhops)     Pattern is not a tree.\n";
     }
 
-    sghd(patterns[0], inputs[0], iterations, result, &successful_tries, &iteration_count, timer);
+    if((&g)->N >=10000){cout << "(sghd)        Warning: Inputgraph may be too big to construct adjacency matrix (will cause Segmentation fault)." << endl;}
+    sghd(argv[1], argv[2], iterations, result, &successful_tries, &iteration_count, timer);
     cout << "(sghd)        Estimate: " << std::fixed << result << " ";
     cout << ", Iterations: " << iteration_count << " ";
     cout << ", Successful Tries: " << successful_tries << " ";

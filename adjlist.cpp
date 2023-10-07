@@ -175,27 +175,23 @@ int graph_props(Graph* g){
 
 int cycle_dfs(Graph* g){
 	int cycle = 0;
-
 	adjNode* ptr;
-	int nodenumber = (int)g->N;
+	int nodenumber = g->N;
+
 	int visited_nodes[nodenumber];
 	for(int i=0; i<nodenumber; i++){
 		visited_nodes[i] = 0;
 	}
 
 	for(int i=0; i<nodenumber; i++){
+
 		if(visited_nodes[i] == 0){
 			visited_nodes[i] = 1;
-
 			ptr = g->head[i];
+
 			while(ptr != nullptr){
 				if(visited_nodes[ptr->val] == 0){
 					dfs_visit(g, ptr->val, i, visited_nodes, &cycle);
-				}
-				else{
-					if(ptr->val != i){
-						cycle = 1;
-					}
 				}
 				ptr = ptr->next;
 			}
@@ -208,9 +204,9 @@ void dfs_visit(Graph* g, int nodeid, int predecessor, int * visited_nodes, int *
 
 	visited_nodes[nodeid] = 1;
 	adjNode* ptr;
-
 	ptr = g->head[nodeid];
-	while(ptr != nullptr){
+
+	while(ptr != nullptr && *cycle == 0){
 		if(visited_nodes[ptr->val] == 0){
 			dfs_visit(g, ptr->val, nodeid, visited_nodes, cycle);
 		}
