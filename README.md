@@ -19,4 +19,12 @@ Durch diese Optionen können einzelne Algorithmen für die Berechnung ausgewähl
 
 "-exactiso [Wert der exakten Lösung für Isomorphismen]" : analog zu "-exacthom".
 
-"-time [ganzzahlige Zeitangabe in Sekunden] : Über diese Option kann gesteuert werden, wie lange die Algorithmen jeweils laufen sollen. [Default=60]
+"-time [ganzzahlige Zeitangabe in Sekunden]" : Über diese Option kann gesteuert werden, wie lange die Algorithmen jeweils laufen sollen. [Default=60]
+
+"-reps [Anzahl an Wiederholungen]" : Über diese Option kann gesteuert werden, wie viele Durchläufe per Algorithmus durchgeführt werden sollen. Es werden die durschnittlichen Ergebnisse über alle Durchläufe ausgegeben. [Default=1]
+
+"-plot" : Wenn diese Option angegeben wird, dann wird am Ende der Demo ein Pythonprogramm aufgerufen. Dieses Programm wird den durchschnittlichen relativen Fehler der Algorithmen über die Laufzeit in einem Plot darstellen.
+
+"-info" : Wenn diese Option angegeben wird, dann werden alle Zwischenergebnisse ausgegeben.
+
+"-inputstats" : Wenn diese Option angegeben wird, dann werden einige grundlegende Eigenschaften der Eingabegraphen ausgegeben.
