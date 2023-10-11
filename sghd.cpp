@@ -4,11 +4,15 @@ using namespace std;
 
 void sghd(const char * filename_h, const char * filename_g, int k, mpf_t result, int * successful_tries, int * iterations_count, int timer){
 
+	string s = "results/sghd.txt";
+    std::ofstream outfile (s);
+    int plot_timer = 1;
+
     using std::chrono::high_resolution_clock;
     using std::chrono::duration_cast;
     using std::chrono::duration;
     using std::chrono::milliseconds;
-	auto t1 = high_resolution_clock::now();
+    auto t1 = high_resolution_clock::now();
     auto t2 = high_resolution_clock::now();
     auto ms_double = chrono::duration_cast<chrono::milliseconds>(t2 - t1);
 
@@ -74,6 +78,16 @@ void sghd(const char * filename_h, const char * filename_g, int k, mpf_t result,
         if ( ms_double.count() >= timer ){
         	timelimit = 1;
         }
+
+        if ( ms_double.count() >= plot_timer*1000 ){
+			mpf_set_ui(result, homomorphism_count);
+			mpf_div_ui(result, result, *iterations_count);
+			mpf_set_ui(result_buf, nodenum_g);
+			mpf_pow_ui(result_buf, result_buf, nodenum_h);
+			mpf_mul(result, result, result_buf);
+        	outfile << result << endl;
+        	plot_timer++;
+        }
 	}
 
 	//Calculate Estimated Homomorphism Density
@@ -87,4 +101,6 @@ void sghd(const char * filename_h, const char * filename_g, int k, mpf_t result,
 
 	freeMatrix(matrix_h);
 	freeMatrix(matrix_g);
+
+	outfile.close();
 }

@@ -115,7 +115,7 @@ void freeMatrix(int** matrix)
     free(matrix);
 }
 
-int graph_props(Graph* g){
+int graph_props(Graph* g, int stats){
 	int nodenumber = (int)g->N;
 	unsigned long edgecount = 0;
 	int degree = 0;
@@ -160,15 +160,17 @@ int graph_props(Graph* g){
 	mpf_add_ui(buffer, buffer, nodenumber);
 	mpf_div(density, density, buffer);
 
-	cout << std::fixed << "Nodes: " << nodenumber << ", Edges: " << edgecount << ", avg. Degree: " << averagedegree  << ", max. Degree: " << maxdegree << ", Density: " << density << endl;
-
 	cycles = cycle_dfs(g);
+	
+	if(stats == 1){
+		cout << std::fixed << "Nodes: " << nodenumber << ", Edges: " << edgecount << ", avg. Degree: " << averagedegree  << ", max. Degree: " << maxdegree << ", Density: " << density << endl;
 
-	if(cycles == 1){cout << "Contains Cycle(s).\n";}
-	else{cout << "No Cycles.\n";}
+		if(cycles == 1){cout << "Contains Cycle(s).\n";}
+		else{cout << "No Cycles.\n";}
 
-	if(loops == 1){ cout << "Contains Loop(s).\n";}
-	else {cout << "No Loops.\n";}
+		if(loops == 1){ cout << "Contains Loop(s).\n";}
+		else {cout << "No Loops.\n";}
+	}
 
 	return cycles;
 }

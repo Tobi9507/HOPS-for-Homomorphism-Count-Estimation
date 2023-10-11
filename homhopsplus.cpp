@@ -4,6 +4,10 @@ using namespace std;
 
 void homhopsplus(Graph* h, Graph* g, int k, mpf_t result, int * successful_tries, int * iterations_count, int timer){
 
+	string s = "results/homhopsplus.txt";
+    std::ofstream outfile (s);
+    int plot_timer = 1;
+
     using std::chrono::high_resolution_clock;
     using std::chrono::duration_cast;
     using std::chrono::duration;
@@ -61,11 +65,20 @@ void homhopsplus(Graph* h, Graph* g, int k, mpf_t result, int * successful_tries
         if ( ms_double.count() >= timer ){
         	timelimit = 1;
         }
+
+        if ( ms_double.count() >= plot_timer*1000 ){
+        	mpf_set_z(result, result2);
+			mpf_div_ui(result, result, *iterations_count);
+        	outfile << result << endl;
+        	plot_timer++;
+        }
 	}
 
 	//Calculate Estimate
 	mpf_set_z(result, result2);
 	mpf_div_ui(result, result, *iterations_count);
+
+	outfile.close();
 }
 
 int EmbedPattern(Graph* h, Graph* g, vector<int> &embedding, int v, int w, mpz_t c){

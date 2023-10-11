@@ -1,6 +1,8 @@
 #ifndef GRAPH_H
 #define GRAPH_H
 
+
+#include <fstream>
 #include <gmpxx.h>
 #include <chrono>
 #include <vector>
@@ -64,7 +66,7 @@ int ** adjacency_matrix(const char * filename, int * nodenum);
 
 int myrand(int range_begin, int range_end);
 std::vector<int> intersection(std::vector<int> v1, std::vector<int> v2);
-int graph_props(Graph* g);
+int graph_props(Graph* g, int stats);
 int cycle_dfs(Graph* g);
 void dfs_visit(Graph* g, int nodeid, int predecessor, int * visited_nodes, int * cycle);
 
