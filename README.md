@@ -9,18 +9,18 @@ Der Ordner "input" enthält die verwendeten Datensets. Das Datenset LiveJournal 
 ## DETAILS AUFRUF
 Ein Aufruf des Demoprogramm kann über mehrere Optionen gesteuert werden. Dazu muss die jeweilige Option an beliebiger Stelle nach den Eingabegraphen folgen. Eine Liste der verfügbaren Optionen:
 
-"-homhops", "-homhopsall", "-hops", "-sghd" : Durch diese Optionen können einzelne Algorithmen für die Berechnung ausgewählt werden. Wird keine dieser Optionen angegeben, werden die Lösungen für alle vier Algorithmen berechnet.
+"-homhops", "-homhopsall", "-hops", "-sghd" :  Durch diese Optionen können einzelne Algorithmen für die Berechnung ausgewählt werden. Wird keine dieser Optionen angegeben, werden die Lösungen für alle vier Algorithmen berechnet.
 
-"-exacthom [Wert der exakten Lösung für Homomorphismen]" : Über diese Option kann dem Programm die exakte Lösung für Homomorphismen mitgeteilt werden. Dies ist notwendig für die Berechnung des relativen Fehlers und dem Anzeigen eines entsprechenden Plots.
+"-exacthom [Wert der exakten Lösung für Homomorphismen]" :  Über diese Option kann dem Programm die exakte Lösung für Homomorphismen mitgeteilt werden. Dies ist notwendig für die Berechnung des relativen Fehlers und dem Anzeigen eines entsprechenden Plots.
 
-"-exactiso [Wert der exakten Lösung für Isomorphismen]" : analog zu "-exacthom".
+"-exactiso [Wert der exakten Lösung für Isomorphismen]" :  analog zu "-exacthom".
 
-"-time [ganzzahlige Zeitangabe in Sekunden]" : Über diese Option kann gesteuert werden, wie lange die Algorithmen jeweils laufen sollen. [Default=60]
+"-time [ganzzahlige Zeitangabe in Sekunden]" :  Über diese Option kann gesteuert werden, wie lange die Algorithmen jeweils laufen sollen. [Default=60]
 
-"-reps [Anzahl an Wiederholungen]" : Über diese Option kann gesteuert werden, wie viele Durchläufe per Algorithmus durchgeführt werden sollen. Es werden die durschnittlichen Ergebnisse über alle Durchläufe ausgegeben. [Default=1]
+"-reps [Anzahl an Wiederholungen]" :  Über diese Option kann gesteuert werden, wie viele Durchläufe per Algorithmus durchgeführt werden sollen. Es werden die durschnittlichen Ergebnisse über alle Durchläufe ausgegeben. [Default=1]
 
-"-plot" : Wenn diese Option angegeben wird, dann wird am Ende der Demo ein Pythonprogramm aufgerufen. Dieses Programm wird den durchschnittlichen relativen Fehler der Algorithmen über die Laufzeit in einem Plot darstellen.
+"-plot" :  Wenn diese Option angegeben wird, dann wird am Ende der Demo ein Pythonprogramm aufgerufen. Dieses Programm wird den durchschnittlichen relativen Fehler der Algorithmen über die Laufzeit in einem Plot darstellen.
 
-"-info" : Wenn diese Option angegeben wird, dann werden alle Zwischenergebnisse ausgegeben.
+"-info" :  Wenn diese Option angegeben wird, dann werden alle Zwischenergebnisse ausgegeben.
 
-"-inputstats" : Wenn diese Option angegeben wird, dann werden einige grundlegende Eigenschaften der Eingabegraphen ausgegeben.
+"-inputstats" :  Wenn diese Option angegeben wird, dann werden einige grundlegende Eigenschaften der Eingabegraphen ausgegeben.
