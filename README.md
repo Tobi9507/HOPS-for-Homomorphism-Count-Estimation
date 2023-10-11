@@ -6,7 +6,7 @@ Für die Repräsentation der Graphen wird ein .txt Format verwendet. Die erste Z
 
 Der Ordner "input" enthält die verwendeten Datensets. Das Datenset LiveJournal ist wegen seiner Größe nicht enthalten. Die Datensets sind ebenfalls im .gr Format vorhanden. Dieses Format wird von der Implementation des exakten Algorithmus verwendet [https://github.com/ChristianLebeda/HomSub].
 
-## DETAILS AUFRUF
+## Details zum Aufruf des Demo-Programms
 Ein Aufruf des Demoprogramm kann über mehrere Optionen gesteuert werden. Dazu muss die jeweilige Option an beliebiger Stelle nach den Eingabegraphen folgen. Eine Liste der verfügbaren Optionen:
 
 "-homhops", "-homhopsall", "-hops", "-sghd" :  
