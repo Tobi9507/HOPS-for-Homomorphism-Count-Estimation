@@ -9,11 +9,7 @@ Der Ordner "input" enthält die verwendeten Datensets. Das Datenset LiveJournal 
 ## DETAILS AUFRUF
 Ein Aufruf des Demoprogramm kann über mehrere Optionen gesteuert werden. Dazu muss die jeweilige Option an beliebiger Stelle nach den Eingabegraphen folgen. Eine Liste der verfügbaren Optionen:
 
-"-homhops"
-"-homhopsall"
-"-hops"
-"-sghd"
-Durch diese Optionen können einzelne Algorithmen für die Berechnung ausgewählt werden. Wird keine dieser Optionen angegeben, werden die Lösungen für alle vier Algorithmen berechnet.
+"-homhops", "-homhopsall", "-hops", "-sghd" : Durch diese Optionen können einzelne Algorithmen für die Berechnung ausgewählt werden. Wird keine dieser Optionen angegeben, werden die Lösungen für alle vier Algorithmen berechnet.
 
 "-exacthom [Wert der exakten Lösung für Homomorphismen]" : Über diese Option kann dem Programm die exakte Lösung für Homomorphismen mitgeteilt werden. Dies ist notwendig für die Berechnung des relativen Fehlers und dem Anzeigen eines entsprechenden Plots.
 
