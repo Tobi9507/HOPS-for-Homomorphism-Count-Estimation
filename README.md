@@ -9,26 +9,26 @@ Der Ordner "input" enthält die verwendeten Datensets. Das Datenset LiveJournal 
 ## Details zum Aufruf des Demo-Programms
 Ein Aufruf des Demoprogramm kann über mehrere Optionen gesteuert werden. Dazu muss die jeweilige Option an beliebiger Stelle nach den Eingabegraphen folgen. Eine Liste der verfügbaren Optionen:
 
-"-homhops", "-homhopsall", "-hops", "-sghd" :  
+**"-homhops", "-homhopsall", "-hops", "-sghd"** :  
 Durch diese Optionen können einzelne Algorithmen für die Berechnung ausgewählt werden. Wird keine dieser Optionen angegeben, werden die Lösungen für alle vier Algorithmen berechnet.
 
-"-exacthom [Wert der exakten Lösung für Homomorphismen]" :  
+**"-exacthom [Wert der exakten Lösung für Homomorphismen]"** :  
 Über diese Option kann dem Programm die exakte Lösung für Homomorphismen mitgeteilt werden. Dies ist notwendig für die Berechnung des relativen Fehlers und dem Anzeigen eines entsprechenden Plots.
 
-"-exactiso [Wert der exakten Lösung für Isomorphismen]" :  
+**"-exactiso [Wert der exakten Lösung für Isomorphismen]"** :  
 analog zu "-exacthom".
 
-"-time [ganzzahlige Zeitangabe in Sekunden]" :  
+**"-time [ganzzahlige Zeitangabe in Sekunden]"** :  
 Über diese Option kann gesteuert werden, wie lange die Algorithmen jeweils laufen sollen. [Default=60]
 
-"-reps [Anzahl an Wiederholungen]" :  
+**"-reps [Anzahl an Wiederholungen]"** :  
 Über diese Option kann gesteuert werden, wie viele Durchläufe per Algorithmus durchgeführt werden sollen. Es werden die durschnittlichen Ergebnisse über alle Durchläufe ausgegeben. [Default=1]
 
-"-plot" :  
+**"-plot"** :  
 Wenn diese Option angegeben wird, dann wird am Ende der Demo ein Pythonprogramm aufgerufen. Dieses Programm wird den durchschnittlichen relativen Fehler der Algorithmen über die Laufzeit in einem Plot darstellen. Das Pythonprogramm kann durch "python plot.py [1/0] [1/0] [1/0] [1/0]" auch manuell nach Durchführen der Demo aufgerufen werden. Es werden die Ergebnisse der letzten Demo verwendet. Durch setzten der [1/0] Argumente können einzelne Algorithmen für die Anzeige ausgewählt werden ([homhops] [homhopsplus] [hops] [sghd]).
 
-"-info" :  
+**"-info"** :  
 Wenn diese Option angegeben wird, dann werden alle Zwischenergebnisse ausgegeben.
 
-"-inputstats" :  
+**"-inputstats"** :  
 Wenn diese Option angegeben wird, dann werden einige grundlegende Eigenschaften der Eingabegraphen ausgegeben.
