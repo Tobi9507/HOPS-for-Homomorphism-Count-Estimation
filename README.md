@@ -25,7 +25,7 @@ analog zu "-exacthom".
 Über diese Option kann gesteuert werden, wie viele Durchläufe per Algorithmus durchgeführt werden sollen. Es werden die durschnittlichen Ergebnisse über alle Durchläufe ausgegeben. [Default=1]
 
 "-plot" :  
-Wenn diese Option angegeben wird, dann wird am Ende der Demo ein Pythonprogramm aufgerufen. Dieses Programm wird den durchschnittlichen relativen Fehler der Algorithmen über die Laufzeit in einem Plot darstellen.
+Wenn diese Option angegeben wird, dann wird am Ende der Demo ein Pythonprogramm aufgerufen. Dieses Programm wird den durchschnittlichen relativen Fehler der Algorithmen über die Laufzeit in einem Plot darstellen. Das Pythonprogramm kann durch "python plot.py [1/0] [1/0] [1/0] [1/0]" auch manuell nach Durchführen der Demo aufgerufen werden. Es werden die Ergebnisse der letzten Demo verwendet. Durch setzten der [1/0] Argumente können einzelne Algorithmen für die Anzeige ausgewählt werden ([homhops] [homhopsplus] [hops] [sghd]).
 
 "-info" :  
 Wenn diese Option angegeben wird, dann werden alle Zwischenergebnisse ausgegeben.
