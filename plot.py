@@ -11,7 +11,6 @@ if sys.argv[1] == '1':
 	plt.plot(x, homhops, label='homHoPS', color = 'b')
 	f.close()
 
-
 if sys.argv[2] == '1':
 	with open('results/homhopsplus.txt') as f2:
 	    	lines = f2.readlines()
@@ -20,7 +19,6 @@ if sys.argv[2] == '1':
 
 	x2 = [x+1 for x in range(len(homhopsplus))]
 	plt.plot(x2, homhopsplus, label='homHoPS+', color = 'c')
-
 
 if sys.argv[3] == '1':
 	with open('results/hops.txt') as f3:
@@ -40,11 +38,8 @@ if sys.argv[4] == '1':
 	x4 = [x+1 for x in range(len(sghd))]
 	plt.plot(x4, sghd, label='sGHD', color = 'g')
 
-
 plt.xlabel('time [s]')
 plt.ylabel('relative error')
-
-#plt.title('50 NODES SPARSE')
 
 plt.legend()
 
