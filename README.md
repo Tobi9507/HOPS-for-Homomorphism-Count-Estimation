@@ -13,7 +13,7 @@ Ein Aufruf des Demoprogramm kann über mehrere Optionen gesteuert werden. Dazu m
 Durch diese Optionen können einzelne Algorithmen für die Berechnung ausgewählt werden. Wird keine dieser Optionen angegeben, werden die Lösungen für alle vier Algorithmen berechnet.
 
 **"-exacthom [Wert der exakten Lösung für Homomorphismen]"** :  
-Über diese Option kann dem Programm die exakte Lösung für Homomorphismen mitgeteilt werden. Dies ist notwendig für die Berechnung des relativen Fehlers und dem Anzeigen eines entsprechenden Plots.
+Über diese Option kann dem Programm die exakte Lösung für Homomorphismen mitgeteilt werden. Dies ist notwendig für die Berechnung des relativen Fehlers und dem Anzeigen eines entsprechenden Plots. Für die Eingaben in dem Ordner Input sind gff. Lösungen bekannt. Die entsprechende Lösung wird in diesem Fall automatisch erkannt und verwendet, wenn die Option -exacthom **nicht** angegeben wird.
 
 **"-exactiso [Wert der exakten Lösung für Isomorphismen]"** :  
 analog zu "-exacthom".
