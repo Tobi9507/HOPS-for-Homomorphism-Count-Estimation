@@ -28,7 +28,7 @@ analog zu "-exacthom".
 Wenn diese Option angegeben wird, dann wird am Ende der Demo ein Pythonprogramm aufgerufen. Dieses Programm wird den durchschnittlichen relativen Fehler der Algorithmen über die Laufzeit in einem Plot darstellen. Das Pythonprogramm kann durch "python plot.py [1/0] [1/0] [1/0] [1/0]" auch manuell nach Durchführen der Demo aufgerufen werden. Es werden die Ergebnisse der letzten Demo verwendet. Durch setzten der [1/0] Argumente können einzelne Algorithmen für die Anzeige ausgewählt werden ([homhops] [homhopsplus] [hops] [sghd]).
 
 **"-info"** :  
-Wenn diese Option angegeben wird, dann werden alle Zwischenergebnisse ausgegeben.
+Wenn diese Option angegeben wird, werden alle Zwischenergebnisse ausgegeben.
 
 **"-inputstats"** :  
-Wenn diese Option angegeben wird, dann werden einige grundlegende Eigenschaften der Eingabegraphen ausgegeben.
+Wenn diese Option angegeben wird, werden einige grundlegende Eigenschaften der Eingabegraphen ausgegeben.
